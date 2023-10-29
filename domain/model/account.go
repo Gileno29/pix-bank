@@ -7,6 +7,13 @@ import (
 	uuid "github.com/satori/go.uuid"
 )
 
+type PixkeyRepositoryInterface interface {
+	RegisterKey(pixKey *Pixkey) (*Pixkey, error)
+	FindKeyByKind(key string, kind string) (*Pixkey, error)
+	AddBank(bank *Bank) error
+	AddAccount(account *Account) error
+	FindAccount(id string) (*Account, error)
+}
 type Account struct {
 	Base      `valid:"required"`
 	OwnerName string `json:"owner_name" valid:"notnull"`
