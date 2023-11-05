@@ -29,6 +29,7 @@ type Transaction struct {
 	AccountFrom       *Account `valid:"-"`
 	Amount            float64  `json:"amount" valid:"notnull"`
 	PixkeyTo          *Pixkey  `valid:"-"`
+	PixkeyIdTo        string   `gorm:"column:pix_key_id_to;type:uuid;" valid:"notnull"`
 	Status            string   `json:"status" valid:"notnull"`
 	Description       string   `json:"description" valid:"notnull"`
 	CancelDescription string   `json:"cancel_description" valid:"-"`
