@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/Gileno29/pix-bank/tree/main/domain/model"
+	"github.com/Gileno29/pix-bank/domain/model"
 
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
